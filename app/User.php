@@ -15,11 +15,6 @@ class User extends Model implements AuthenticatableContract,
                                     CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword;
-    
-    public function microposts()
-    {
-        return $this->hasMany(Micropost::class);
-    }
 
     /**
      * The database table used by the model.
